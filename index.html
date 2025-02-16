@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
 <!-- Navigation Bar -->
 <header>
     <nav id="navbar" class="navbar">
@@ -15,7 +16,7 @@
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Reservation</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
       </ul>
     </nav>
@@ -90,6 +91,7 @@ ScrollReveal().reveal('.menu-item', {
         <!-- Add more menu items with "Add to Order" buttons as needed -->
       </div>
     </div>
+    <button id="loginBtn">All Menu</button>
   </section>
   
  <!-- Order Summary Modal -->
@@ -161,6 +163,9 @@ ScrollReveal().reveal('.menu-item', {
       <div class="gallery-grid">
         <img src="service-3.jpg" alt="Coffee 1">
         <img src="service-4.jpg" alt="Coffee 2">
+        <img src="coffee-bar.jpg" alt="Coffee 3">
+        <img src="imagesfood.jpg" alt="Coffee 4">
+        <img src="istockphoto.jpg" alt="Coffee 5">
         <!-- Add more images as needed -->
       </div>
     </div>
@@ -169,12 +174,18 @@ ScrollReveal().reveal('.menu-item', {
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Contact Us</h2>
+      <h2>Table Reservation</h2>
       <form action="" method="post">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Your message"></textarea>
-        <button type="submit">Send Message</button>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <select id="guests">
+          <option value="1">1 Person</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5">5+ People</option> 
+        <input type="datetime-local" id="date" required>
+        <button type="submit">Reserve</button>
       </form>
     </div>
   </section>
@@ -198,7 +209,9 @@ ScrollReveal().reveal('.menu-item', {
       </div>
     </div>
   </section>
-  
+
+
+
 <!-- Map Section -->
 <section id="map" class="map">
     <h2>Find Us</h2>
@@ -229,5 +242,10 @@ L.marker([51.505, -0.09]).addTo(map)
   </footer>
   <script src="script.js"></script>
   <script src="app.js"></script>
+  <script>document.getElementById('loginBtn').addEventListener('click', function() {
+                   window.open('login.html', '_blank'); 
+    // Opens the login page in a new tab
+       }); </script>
+
 </body>
 </html>
